@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import styles from "@/styles/Header.module.css"
 import Link from "next/link";
+import { MagnifyingGlass,Phone,ShoppingCart,User,EnvelopeSimple} from "@phosphor-icons/react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
-import { MagnifyingGlass} from "@phosphor-icons/react";
 // import apiUrl from "../../utils/apiUrl";
 import { Autoplay, EffectCube, Pagination } from "swiper/modules";
 
@@ -63,7 +64,7 @@ export default function Header() {
         <div className={`col-12 col-md-8 ${styles.Header_rightSide} centerr` }>
           <div className={styles.Header_rightSide__div_img}>
             <div style={{ width: "135px", height: "105px" }}>
-              <>
+            <>
                 <Swiper
                   loop={true}
                   autoplay={{
@@ -96,6 +97,7 @@ export default function Header() {
                   </SwiperSlide>
                 </Swiper>
               </>
+              
             </div>
           </div>
 
@@ -105,35 +107,27 @@ export default function Header() {
               type="text"
               placeholder="دنبال چی میگردی...؟"
             />
-<MagnifyingGlass size={24} color="#14a5af" weight="thin" />
+ <MagnifyingGlass size={24} color="#14a5af" weight="thin" className={styles.magnifyingGlass}/> 
           </div>
         </div>
+
+
+
+        
         <div className={`col-12 col-md-4 ${styles.Header_leftSide} centerr`}>
           <div className={` ${styles.Header_leftSide__div} centerr`}>
-            {" "}
-            {/* <i
-              class="fa-solid fa-cart-arrow-down fa-xl"
-              style={{ color: "#14a5af" }}
-            ></i> */}
+          <ShoppingCart size={24} color="#14a5af" />        </div>
+          <div  className= {` ${styles.Header_leftSide__div} centerr`}>
+          <EnvelopeSimple size={24} color="#14a5af" />
           </div>
-          <div  className= {` ${styles.Header_leftSide__divv} centerr`}>
-            {/* <i
-              class="fa-regular fa-envelope fa-xl"
-              style={{ color: "#14a5af" }}
-            ></i>{" "} */}
-          </div>
-          <div className={` ${styles.Header_leftSide__div} centerr`}  >
+          <div className={`${styles.Header_leftSide__div} centerr`}  >
             {" "}
-            {/* <i
-              class="fa-regular fa-user fa-xl"
-              style={{ color: "#14a5af" }}
-            ></i> */}
+            <User size={24} color="#14a5af" />
           </div>
 
           <div className={`col-lg-4 ${styles.Header_leftSide__number_div} centerr`}>
             <span>02191005457</span>
-            {/* <i class="fa-solid fa-phone" style={{ color: "#ffffff" }}></i> */}
-          </div>
+            <Phone size={24} color="#ededed" weight="duotone" />      </div>
         </div>
       </div>
 
