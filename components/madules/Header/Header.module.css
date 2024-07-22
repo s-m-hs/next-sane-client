@@ -12,7 +12,7 @@
 
 .Header_top {
     position: relative;
-    width: 80%;
+    width: 90%;
     margin: 0 auto !important;
     padding-top: 10px;
     border-radius: 15px;
@@ -34,8 +34,8 @@
 }
 
 .Header_leftSide {
-    position: absolute;
-left: 0;
+    /* position: absolute;
+left: 0; */
     justify-content: flex-end;
     align-items: center;
 }
@@ -86,6 +86,7 @@ left: 0;
     width: 2cqi;
     height: 2cqi;
     box-shadow: 0 0 15px -10px rgb(0, 0, 0, 0.75);
+    cursor: pointer;
 }
 .header_bottom{
     height: 30px;
@@ -167,9 +168,13 @@ left: 0;
 .header_bottom__col__ul__ul>li {
     font-size: 1.7rem;
 }
-.Header_rightSide__div_img{
+/* .Header_rightSide__div_img{
     position: absolute;
     right: 0;
+} */
+.search_div{
+    position: absolute;
+    left:30%;
 }
 .Header_rightSide__div_search{
     border-radius: 10px;

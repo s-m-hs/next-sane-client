@@ -60,48 +60,15 @@ export default function Header() {
   return (
       <div className={`container ${styles.Header}`}>
       <div className={`row ${styles.Header_top } centerr`}>
-        <div className={`col-12 col-md-8 ${styles.Header_rightSide} centerr` }>
+
+        <div className={`col col-md-8 ${styles.Header_rightSide} centerr` }>
           <div className={styles.Header_rightSide__div_img}>
             <div style={{ width: "135px", height: "105px" }}>
-            <>
             <SwiperA/>
-                {/* <Swiper
-                  loop={true}
-                  autoplay={{
-                    delay: 1500,
-                    disableOnInteraction: false,
-                  }}
-                  effect={"cube"}
-                  grabCursor={true}
-                  cubeEffect={{
-                    shadow: true,
-                    slideShadows: true,
-                    shadowOffset: 20,
-                    shadowScale: 0.94,
-                  }}
-                  pagination={true}
-                  modules={[Autoplay, EffectCube, Pagination]}
-                  className="mySwiper" 
-                >
-                  <SwiperSlide>
-                    <img src="../../images/photo_2024-05-30_19-08-29.jpg" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src="../../images/photo_2024-05-30_19-08-24.jpg" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src="../../images/1005639-خنده-دار-اقامت-ربات-سفید.jpg" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src="../../images/1480096-فروش-برچسب-50٪-تخفیف.jpg" />
-                  </SwiperSlide>
-                </Swiper> */}
-              </>
-              
             </div>
           </div>
-
-          <div className={`${styles.Header_rightSide__div_search}  centerc`}>
+{/* <div className={styles.search_div}> */}
+    <div className={`${styles.Header_rightSide__div_search}  centerc`}>
             <input
               className={styles.Header_rightSide__div_search_input}
               type="text"
@@ -109,12 +76,11 @@ export default function Header() {
             />
  <MagnifyingGlass size={24} color="#14a5af" weight="thin" className={styles.magnifyingGlass}/> 
           </div>
+{/* </div> */}
+        
         </div>
 
-
-
-        
-        <div className={`col-12 col-md-4 ${styles.Header_leftSide} centerr`}>
+        <div className={`col col-md-4 ${styles.Header_leftSide} centerr`}>
           <div className={` ${styles.Header_leftSide__div} centerr`}>
           <ShoppingCart size={24} color="#14a5af" />        </div>
           <div  className= {` ${styles.Header_leftSide__div} centerr`}>
@@ -129,6 +95,7 @@ export default function Header() {
             <span>02191005457</span>
             <Phone size={24} color="#ededed" weight="duotone" />      </div>
         </div>
+
       </div>
 
       <div className={`row  ${styles.header_bottom} `}  >
