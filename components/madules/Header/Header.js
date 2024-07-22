@@ -1,55 +1,54 @@
 import React, { useEffect, useState, useRef, useMemo } from "react";
-import styles from "@/styles/Header.module.css"
+import styles from "./Header.module.css"
 import Link from "next/link";
+import SwiperA from "@/components/templates/Home/SwiperA/SwiperA";
 import { MagnifyingGlass,Phone,ShoppingCart,User,EnvelopeSimple} from "@phosphor-icons/react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-cube";
-import "swiper/css/pagination";
-// import apiUrl from "../../utils/apiUrl";
+
 import { Autoplay, EffectCube, Pagination } from "swiper/modules";
+// import apiUrl from "../../utils/apiUrl";
+
 
 export default function Header() {
   const [valeS, setValue] = useState(1);
   const [mainCategory, setMainCategory] = useState({});
 
-//   const getCategoryById = () => {
-//     let obj = {
-//       gid: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-//       id: 2,
-//       str: "string",
-//     };
-//     async function myAppGet() {
-//       const res = await fetch(
-//         `http://sapi.sanecomputer.com/api/CyCategories/GetItemWChildAndRoot`,
-//         {
-//           method: "POST",
-//           headers: {
-//             "Content-Type": "application/json",
-//           },
-//           body: JSON.stringify(obj),
-//         }
-//       )
-//         .then((res) => {
-//           console.log(res);
-//           return res.json();
-//         })
-//         .then((result) => {
-//           // console.log(result)
-//           setMainCategory(result);
-//           console.log(mainCategory);
-//         });
-//     }
-//     myAppGet();
-//   };
+  const getCategoryById = () => {
+    let obj = {
+      gid: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      id: 2,
+      str: "string",
+    };
+    async function myAppGet() {
+      const res = await fetch(
+        `http://sapi.sanecomputer.com/api/CyCategories/GetItemWChildAndRoot`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(obj),
+        }
+      )
+        .then((res) => {
+          console.log(res);
+          return res.json();
+        })
+        .then((result) => {
+          // console.log(result)
+          setMainCategory(result);
+          console.log(mainCategory);
+        });
+    }
+    myAppGet();
+  };
   // console.log(imgSrcProp);
 
   ////////////////////////////
-//   useEffect(() => {
-//     getCategoryById();
-//     // console.log(mainCategory.childs[0].imageUrl)
-//   }, []);
+  useEffect(() => {
+    getCategoryById();
+    // console.log(mainCategory.childs[0].imageUrl)
+  }, []);
 
   const onmousHandle = (e) => {
     if (e.target.value) {
@@ -65,7 +64,8 @@ export default function Header() {
           <div className={styles.Header_rightSide__div_img}>
             <div style={{ width: "135px", height: "105px" }}>
             <>
-                <Swiper
+            <SwiperA/>
+                {/* <Swiper
                   loop={true}
                   autoplay={{
                     delay: 1500,
@@ -95,7 +95,7 @@ export default function Header() {
                   <SwiperSlide>
                     <img src="../../images/1480096-فروش-برچسب-50٪-تخفیف.jpg" />
                   </SwiperSlide>
-                </Swiper>
+                </Swiper> */}
               </>
               
             </div>
@@ -134,24 +134,25 @@ export default function Header() {
       <div className={`row  ${styles.header_bottom} `}  >
         <div className={`col ${styles.header_bottom__col}`}  >
 
-
           <ul className={`${styles.header_bottom__col__ul} centerr`}  >
-            <li className="arrow_icon"  >
+            <li className="nav_link arrow_icon"  >
+
               دسته بندی ها
               <ul className={`${styles.header_bottom__col__ul__ul} centerc`}>
                 <li
                   value={1}
                   onMouseEnter={onmousHandle}
-                  className={valeS == 1 ?    `${styles.liiii2_a}` : `${styles.liiii2}`  }
+                  className={valeS == 1 ?    ` ${styles.liiii2_a}` : `${styles.liiii2}`  }
                 >
                   لوازم جانبی
                   <div className={` container centerr ${styles.header_bottom__col__ul__ul__ul }`}>
                     <div
-                      className={valeS == 1 ? `row_cols_6 ${styles.ishover}` : `${styles.nohover}` }
+                      className={valeS == 1 ? `row-cols-6 ${styles.ishover}` : `${styles.nohover}` }
                     >
                       {mainCategory.childs?.length &&
                         mainCategory.childs.map((item, index) => (
                           <Link
+                          href={'/'}
                             className={`${styles.header_bottom__col__ul__ul__ul__link2}`}
                           >
                             <img src={item.imageUrl} alt="" />
@@ -170,7 +171,7 @@ export default function Header() {
                   سخت افزار
                   <div className={`container  centerr ${styles.header_bottom__col__ul__ul__ul}`}>
                     <div
-                     className={valeS == 2 ? `row_cols_4 ${styles.ishover}` : `${styles.nohover}` }
+                     className={valeS == 2 ? `row-cols-4 ${styles.ishover}` : `${styles.nohover}` }
 
                       // className={valeS == 2 ? "row-cols-4 ishover" : " nohover"}
                     >
@@ -218,7 +219,7 @@ export default function Header() {
                   مبدل ها
                   <div className={`container  centerr ${styles.header_bottom__col__ul__ul__ul}`} >
                     <div
-                     className={valeS == 4 ? `row_cols_4 ${styles.ishover}` : `${styles.nohover}` }
+                     className={valeS == 4 ? `row-cols-4 ${styles.ishover}` : `${styles.nohover}` }
 
                       // className={valeS == 4 ? "row-cols-4 ishover" : " nohover"}
                     >
@@ -253,7 +254,7 @@ export default function Header() {
                   لپ تاپ
                   <div className={`container  centerr ${styles.header_bottom__col__ul__ul__ul}`}  >
                     <div
-                      className={valeS == 6 ? `row_cols_6 ${styles.ishover}` : `${styles.nohover}` }
+                      className={valeS == 6 ? `row-cols-6 ${styles.ishover}` : `${styles.nohover}` }
 
                       // className={valeS == 6 ? "row-cols-4 ishover" : " nohover"}
                     >
@@ -282,9 +283,9 @@ export default function Header() {
                 </li>
               </ul>
             </li>
-            <li>فروش اقساط</li>
+            <li className="nav_link">فروش اقساط   </li>
             <li>خدمات</li>
-            <li>درباره ما</li>
+            <li> <Link href={'/about'}style={{listStyle:'none',textDecoration:'none',color:'inherit'}} >درباره ما</Link> </li>
           </ul>
         </div>
 
