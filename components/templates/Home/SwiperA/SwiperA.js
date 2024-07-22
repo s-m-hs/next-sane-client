@@ -25,7 +25,7 @@ export default function SwiperA() {
                     shadowOffset: 20,
                     shadowScale: 0.94,
                   }}
-                  pagination={true}
+                  // pagination={true}
                   modules={[Autoplay, EffectCube, Pagination]}
                   className={styles.swiper} 
                 >
