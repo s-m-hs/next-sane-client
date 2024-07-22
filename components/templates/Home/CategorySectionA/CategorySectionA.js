@@ -46,8 +46,8 @@ useEffect(()=>{
 },[])
 
   return ( 
-    <div className={`container  centerr ${styles.bcatitem}`}  >
-        <div className='row row-cols-6'>
+    // <div className={`container  centerr ${styles.bcatitem}`}  >
+        <div className={`row row-cols-6  ${styles.bcatitem}`}  >
 
 {mainCategory.childs &&   mainCategory.childs.map((item,index)=>
   <CardA imgSrc={item.imageUrl} category={`category`} id={item.id}/>
@@ -58,6 +58,6 @@ useEffect(()=>{
   
         </div>
 
-       </div>
+      //  </div>
   )
 }
