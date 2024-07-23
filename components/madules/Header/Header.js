@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState, useRef, useMemo } from "react";
 import styles from "./Header.module.css"
 import Link from "next/link";

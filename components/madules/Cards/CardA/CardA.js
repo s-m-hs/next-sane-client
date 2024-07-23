@@ -11,7 +11,7 @@ export default function CardA({imgSrc,category,id,changeIdProp}) {
   href={category ? `${category}/${id}` : ''} onClick={changeIdProp} >
 <img className={styles.cardcat__img} src={imgSrc} alt="" />
 
-    <div className={`${styles.success} circle`} >
+    <div className={`${styles.success} `} >
         
     </div>
 

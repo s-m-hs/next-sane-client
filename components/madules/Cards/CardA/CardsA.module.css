@@ -38,7 +38,7 @@
       animation: spin 20s linear infinite;
     }
     
-    .circle_wrapper:hover .circle {
+    .circle_wrapper:hover .success {
       animation: spin 4s linear infinite;
   
     }
@@ -49,6 +49,13 @@
     }
     
     .success {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      padding: 5px;
+      background-clip: content-box;
+      animation: spin 20s linear infinite;
       /* background-color: #4BB543; */
       border: 2.5px dashed var(--them);
     }
