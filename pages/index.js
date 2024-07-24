@@ -14,12 +14,26 @@ export default function Home() {
     {img:"../../../images/products/45f44d125ebd0405d6f4827b2a47f5674c0eef09_1640430945.jpg",title:'هدفون بی سیم Tsco',price:'836,000'},
     {img:"../../../images/products/04892b84e1c0f235822724ff6e92c4d55ca7523d_1707223995.jpg",title:' ایرپاد Samsung ',price:'935,000'},
   ]
+  const sliderDetail2=[
+    {img:"../../../images/products/mypass.jpg",title:'MyPass 1T',price:'3,320,000'},
+    {img:"../../../images/products/spower2t.jpg",title:'Silicon Power 2T',price:'5,360,000'},
+    {img:"../../../images/products/980proo.jpg",title:'nvme pro 980 512G  ',price:'3,270,000'},
+    {img:"../../../images/products/adata.jpg",title:'  adata 2t ',price:'4,680,000'},
+    {img:"../../../images/products/modemtp.jpg",title:'TPlink 9960',price:'1,327000'},
+    {img:"../../../images/products/green aria.jpg",title:'Green Aria',price:'2,225,000'},
+    {img:"../../../images/products/lexar 512.jpg",title:'Lexar 512g',price:'2,335,000'},
+    {img:"../../../images/products/main610.jpg",title:'ASUS H610 MA-WIFI',price:'5,320,000'},
+    {img:"../../../images/products/12400 tray.jpg",title:' intel 12400 ',price:'7,935,000'},]
   return (
 <div className='container'>
   <div className='row'>
     <div className='col-12'><SwiperB/></div>
     <CategorySectionA/>
     <SwiperC title={'پرفروش ترین ها'} sliderDetailProp={sliderDetail}/>
+    <CategorySectionA/>
+    <SwiperC title={'پرفروش ترین های سخت افزار'} sliderDetailProp={sliderDetail2}/>
+
+
     <hr/>
     <hr/>
     <hr/>
