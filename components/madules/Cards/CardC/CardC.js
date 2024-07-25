@@ -15,7 +15,8 @@ export default function CardC({imgSrc,title,price }) {
     <i class="fa-solid fa-heart " style={{color:'#14a5af'}} ></i> */}
 
     </div>
-<Link className={Styles.cardprob__link}  href='/product' >جزییات بیشتر...</Link>
+<Link className={Styles.cardprob__link}
+  href='/products/id' >جزییات بیشتر...</Link>
     <div>
 
     </div>
