@@ -3,6 +3,7 @@ import Styles from './ProductDetail.module.css'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import ProducyDetailRight from './ProducyDetailRight/ProducyDetailRight';
+import ProductDetailLeft from './ProductDetailLeft/ProductDetailLeft';
 
 // import ProductDetailL from '../../Components/ProductDetail/ProductDetailL'
 
@@ -14,7 +15,7 @@ export default function ProductDetail() {
 
 <div className={`row ${Styles.product_row}`}  >
   <div className={`col-md-3  ${Styles.product_right_col}`} ><ProducyDetailRight/></div>
-  {/* <div className="col-md-9 product-left-col"><ProductDetailL/></div> */}
+  <div className="col-md-9 product-left-col"><ProductDetailLeft/></div>
   
 </div>
 <div className='row'>
