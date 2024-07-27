@@ -27,11 +27,11 @@ export default function Home() {
   return (
 <div className='container'>
   <div className='row'>
-    <div className='col-12'><SwiperB/></div>
+    <div className='col-12 mb-5'><SwiperB/></div>
     <CategorySectionA/>
-    <SwiperC title={'پرفروش ترین ها'} sliderDetailProp={sliderDetail}/>
+    <SwiperC title={'پرفروش ترین ها :'} sliderDetailProp={sliderDetail}/>
     <CategorySectionA/>
-    <SwiperC title={'پرفروش ترین های سخت افزار'} sliderDetailProp={sliderDetail2}/>
+    <SwiperC title={'پرفروش ترین های سخت افزار :'} sliderDetailProp={sliderDetail2}/>
 
 
     <hr/>
